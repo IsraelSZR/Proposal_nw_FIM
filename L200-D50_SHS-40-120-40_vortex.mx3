@@ -31,9 +31,9 @@ saveas(m, "geom")
 //Regions
 //----------------------------------------------------------
 
-defregion(1, zrange(-100e-9, -25e-9))  // first cylinder 
-defregion(2, zrange(-25e-9,25e-9))   // second cylinder  
-defregion(3, zrange(25e-9, 100e-9))   // third cylinder   
+defregion(1, zrange(-100e-9, -60e-9))  // first cylinder 
+defregion(2, zrange(-60e-9,60e-9))   // second cylinder  
+defregion(3, zrange(60e-9, 100e-9))   // third cylinder   
 save(regions)
 
 //----------------------------------------------------------
@@ -68,8 +68,8 @@ anisU.setregion(3, vector(0,0,1))
 //initial magnetization states
 //----------------------------------------------------------
 
-m = Uniform(0,0.1,1)
-saveas(m, "Ferro_Z")
+m = Vortex(1,-1)
+saveas(m, "vortex")
 
 TableAdd(m_full)
 TableAdd(B_ext)
